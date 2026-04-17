@@ -128,6 +128,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .tag-r{background:rgba(240,98,146,.08);color:var(--rose);border:1px solid rgba(240,98,146,.14)}
 .tag-b{background:rgba(91,155,213,.08);color:var(--blue);border:1px solid rgba(91,155,213,.14)}
 .tag-w{background:rgba(255,255,255,.04);color:var(--muted2);border:1px solid var(--border2)}
+/* PROJECTS GRID — fixed layout */
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .project-card{background:var(--card);border:1px solid var(--border);padding:30px;display:flex;flex-direction:column;gap:14px;transition:all .28s;position:relative;overflow:hidden}
 .project-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(212,168,83,.05) 0%,transparent 60%);opacity:0;transition:opacity .4s}
@@ -153,7 +154,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .project-link:hover{gap:12px}
 .nda-walkthrough{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--muted2);text-decoration:none;letter-spacing:.05em;transition:color .2s,border-color .2s;cursor:none;width:fit-content;border:1px solid var(--border);padding:6px 12px;border-radius:2px}
 .nda-walkthrough:hover{color:var(--gold);border-color:rgba(212,168,83,.3)}
-.doc-interact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:14px;transition:all .28s;position:relative;overflow:hidden;grid-column:span 2}
+/* DOC-INTERACT — full width row */
+.doc-interact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:14px;transition:all .28s;position:relative;overflow:hidden;grid-column:1 / -1}
 .doc-interact-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(78,205,196,.06) 0%,transparent 60%);opacity:0;transition:opacity .4s}
 .doc-interact-card:hover{border-color:rgba(78,205,196,.25);transform:translateY(-3px)}
 .doc-interact-card:hover::after{opacity:1}
@@ -210,6 +212,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .edu-details{display:flex;flex-direction:column;gap:6px}
 .edu-detail{font-size:14px;color:var(--muted2);display:flex;align-items:flex-start;gap:8px}
 .edu-detail::before{content:'→';color:var(--gold);flex-shrink:0;font-family:var(--mono)}
+/* RECOMMENDATIONS — beautiful */
 .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .rec-card{background:var(--card);border:1px solid var(--border);padding:36px 40px;display:flex;flex-direction:column;gap:20px;text-decoration:none;position:relative;overflow:hidden;transition:all .3s;cursor:pointer;border-radius:4px}
 .rec-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--gold);transition:width .4s}
@@ -217,21 +220,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .rec-card:hover::before{width:3px}
 .rec-linkedin-badge{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;color:#0a66c2;background:rgba(10,102,194,.08);border:1px solid rgba(10,102,194,.2);padding:5px 12px;border-radius:20px;width:fit-content;transition:all .2s;letter-spacing:.04em}
 .rec-card:hover .rec-linkedin-badge{background:rgba(10,102,194,.15);border-color:rgba(10,102,194,.35)}
-.rec-quote-mark{font-family:var(--serif);font-size:100px;line-height:.6;color:rgba(212,168,83,.08);font-weight:900;user-select:none;position:absolute;top:60px;right:28px}
+.rec-quote-mark{font-family:var(--serif);font-size:120px;line-height:.5;color:rgba(212,168,83,.06);font-weight:900;user-select:none;position:absolute;top:50px;right:24px;pointer-events:none}
 .rec-reviewer{display:flex;align-items:flex-start;gap:14px}
-.rec-avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,rgba(212,168,83,.3),rgba(78,205,196,.2));border:1px solid rgba(212,168,83,.25);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold);flex-shrink:0}
+.rec-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,rgba(212,168,83,.3),rgba(78,205,196,.2));border:1px solid rgba(212,168,83,.25);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:17px;font-weight:700;color:var(--gold);flex-shrink:0}
 .rec-reviewer-info{display:flex;flex-direction:column;gap:3px}
-.rec-reviewer-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--text);line-height:1.2}
+.rec-reviewer-name{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--text);line-height:1.2}
 .rec-reviewer-role{font-size:13px;color:var(--muted2);font-style:italic}
 .rec-reviewer-meta{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.05em}
-.rec-highlight{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--text2);line-height:1.65;padding-left:16px;border-left:2px solid var(--gold)}
+.rec-highlight{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--text2);line-height:1.7;padding:16px 20px;border-left:3px solid var(--gold);background:rgba(212,168,83,.04);border-radius:0 4px 4px 0}
 .rec-tags{display:flex;flex-wrap:wrap;gap:6px}
-.rec-tag{font-family:var(--mono);font-size:10px;padding:3px 10px;border-radius:2px;background:rgba(212,168,83,.06);color:var(--gold);border:1px solid rgba(212,168,83,.14);letter-spacing:.04em}
-.rec-closing{font-size:14px;color:var(--muted2);line-height:1.75;padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:3px;font-style:italic}
-.rec-placeholder{background:var(--card);border:1px dashed rgba(255,255,255,.08);padding:36px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:300px;border-radius:4px}
-.rec-placeholder-icon{width:44px;height:44px;border-radius:50%;border:1px dashed rgba(212,168,83,.2);display:flex;align-items:center;justify-content:center;font-size:22px;color:rgba(212,168,83,.25);font-family:var(--mono)}
-.rec-placeholder-text{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center;letter-spacing:.04em;line-height:1.6}
-.rec-linkedin-link{font-family:var(--mono);font-size:11px;color:var(--gold);text-decoration:none;border:1px solid rgba(212,168,83,.25);padding:6px 14px;border-radius:2px;letter-spacing:.06em;transition:all .2s}
+.rec-tag{font-family:var(--mono);font-size:10px;padding:4px 11px;border-radius:2px;background:rgba(212,168,83,.06);color:var(--gold);border:1px solid rgba(212,168,83,.14);letter-spacing:.04em}
+.rec-body{display:flex;flex-direction:column;gap:10px;padding:18px 20px;background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:4px}
+.rec-body p{font-size:14px;color:var(--muted2);line-height:1.85;margin:0}
+.rec-closing{font-family:var(--serif);font-size:15px;font-style:italic;color:var(--gold);line-height:1.6;padding:14px 18px;border-left:3px solid var(--gold);background:rgba(212,168,83,.04);border-radius:0 4px 4px 0}
+.rec-placeholder{background:var(--card);border:1px dashed rgba(255,255,255,.08);padding:36px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:300px;border-radius:4px}
+.rec-placeholder-icon{width:48px;height:48px;border-radius:50%;border:1px dashed rgba(212,168,83,.2);display:flex;align-items:center;justify-content:center;font-size:24px;color:rgba(212,168,83,.25);font-family:var(--mono)}
+.rec-placeholder-text{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:center;letter-spacing:.04em;line-height:1.7}
+.rec-linkedin-link{font-family:var(--mono);font-size:11px;color:var(--gold);text-decoration:none;border:1px solid rgba(212,168,83,.25);padding:7px 16px;border-radius:2px;letter-spacing:.06em;transition:all .2s}
 .rec-linkedin-link:hover{background:var(--gold-dim);border-color:var(--gold)}
 .contact-wrap{padding:96px 56px;position:relative;z-index:2;background:var(--card);border-top:1px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
@@ -259,7 +264,7 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:rgba(212,168,83,.22);border-radius:2px}
-@media(max-width:1100px){.hero{grid-template-columns:1fr;gap:48px}.projects-grid{grid-template-columns:1fr 1fr}.project-card.span2{grid-column:span 1}.doc-interact-card{grid-column:span 1}.work-item{grid-template-columns:1fr;gap:22px;padding:32px 28px}.edu-grid,.rec-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:40px}}
+@media(max-width:1100px){.hero{grid-template-columns:1fr;gap:48px}.projects-grid{grid-template-columns:1fr 1fr}.project-card.span2,.doc-interact-card{grid-column:1 / -1}.work-item{grid-template-columns:1fr;gap:22px;padding:32px 28px}.edu-grid,.rec-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:40px}}
 @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.hero,.section,.contact-wrap{padding:76px 20px 52px}.hero-metrics{flex-wrap:wrap;gap:20px}.metric{border-right:none;padding-right:0;margin-right:0}.projects-grid{grid-template-columns:1fr}footer{padding:18px 20px;flex-direction:column;gap:6px}body{cursor:auto}.cursor-dot,.cursor-ring{display:none}.contact-photo{width:130px;height:130px}}
 </style>
 </head>
@@ -307,19 +312,11 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
   <div class="hero-right">
     <div class="demo-panel">
       <div class="demo-topbar">
-        <div class="demo-dots">
-          <div class="demo-dot" style="background:#ff5f57"></div>
-          <div class="demo-dot" style="background:#febc2e"></div>
-          <div class="demo-dot" style="background:#28c840"></div>
-        </div>
+        <div class="demo-dots"><div class="demo-dot" style="background:#ff5f57"></div><div class="demo-dot" style="background:#febc2e"></div><div class="demo-dot" style="background:#28c840"></div></div>
         <div class="demo-title">govdoc-agent &middot; live extraction</div>
       </div>
       <div class="demo-body">
-        <div class="demo-file-row">
-          <div class="demo-file-icon">&#128196;</div>
-          <div class="demo-file-name">Polizeiliche_Anzeige_Musterfrau.pdf</div>
-          <div class="demo-file-size">48 KB</div>
-        </div>
+        <div class="demo-file-row"><div class="demo-file-icon">&#128196;</div><div class="demo-file-name">Polizeiliche_Anzeige_Musterfrau.pdf</div><div class="demo-file-size">48 KB</div></div>
         <div class="demo-stage-label" id="demo-stage">INITIALISING...</div>
         <div class="demo-prog-track"><div class="demo-prog-fill" id="demo-progress"></div></div>
         <div class="demo-fields" id="demo-fields"></div>
@@ -410,17 +407,28 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
   <div class="section-tag reveal"><span class="section-num">02</span><div class="section-line"></div></div>
   <div class="section-title reveal">Projects <em>&amp; Research</em></div>
   <div class="projects-grid">
+    <!-- ROW 1: GovDoc spans 2 cols, Thesis in col 3 -->
     <div class="project-card span2 featured reveal">
       <div class="project-num">01</div>
       <div class="project-top"><div class="project-badges"><span class="badge badge-live">&#9679; Live on GitHub</span><span class="badge badge-vibe">Vibe Coded &middot; Claude Code</span></div></div>
       <div class="project-title">GovDoc AI Agent: Government Document Intelligence</div>
-      <div class="project-story">Built to target <strong>public.consulting</strong>'s domain &mdash; digitalisation of German public administration. <strong>Vibe-coded from zero to deployed in under 2 hours</strong> using Claude Code. Full stack: FastAPI backend, Docling OCR, Claude AI extraction, Qdrant semantic search, React UI, Docker deployment, GitHub Actions CI.<br><br>The demo above is real. Tested on an actual German police report: 12 fields extracted at <strong>95% confidence in 115ms</strong>.</div>
+      <div class="project-story">Built to target <strong>public.consulting</strong>'s domain &mdash; digitalisation of German public administration. <strong>Vibe-coded from zero to deployed in under 2 hours</strong> using Claude Code. Full stack: FastAPI backend, Docling OCR, Claude AI extraction, Qdrant semantic search, React UI, Docker deployment, GitHub Actions CI.<br><br>Tested on an actual German police report: 12 fields extracted at <strong>95% confidence in 115ms</strong>.</div>
       <div class="project-outcome">&rarr; 12/12 fields &middot; 95% confidence &middot; 115ms &middot; Full stack &middot; Deployed &middot; Built in &lt;2 hrs</div>
       <div class="project-stack"><span class="tag tag-g">Claude AI</span><span class="tag tag-g">FastAPI</span><span class="tag tag-t">Docling OCR</span><span class="tag tag-t">Qdrant</span><span class="tag tag-r">React UI</span><span class="tag tag-b">TypeScript</span><span class="tag tag-w">Docker Compose</span><span class="tag tag-w">GitHub Actions</span></div>
       <a href="https://github.com/Nithyasusangeorge1987/govdoc-agent" target="_blank" class="project-link">View on GitHub &rarr;</a>
     </div>
+    <div class="project-card reveal">
+      <div class="project-num">03</div>
+      <div class="project-top"><div class="project-badges"><span class="badge badge-thesis">Master's Thesis &middot; 2026</span></div></div>
+      <div class="project-title">Layered LLM Architecture for Autonomous AI</div>
+      <div class="project-story">Brain-inspired cognitive system with five layers (perception, affect modelling, reasoning, self-reflection, ethics) running a heartbeat-driven loop. A self-referential <strong>"Self / Transcendence" layer</strong> enables internally grounded decision-making based on survival, coherence, identity alignment, and progression.<br><br>Stack: FastAPI, React, Redis, LM Studio (Llama 3.1 8B) + GPT-4o, <strong>OpenClaw</strong> for real-world task execution (web, email, calendar, filesystem).</div>
+      <div class="project-outcome">&rarr; Proto-autonomous behavior &middot; Fully local LLMs &middot; Architecture walkthrough available</div>
+      <div class="project-stack"><span class="tag tag-g">LangGraph</span><span class="tag tag-t">FastAPI</span><span class="tag tag-t">Redis</span><span class="tag tag-r">React</span><span class="tag tag-w">LM Studio</span><span class="tag tag-w">OpenClaw</span></div>
+      <a href="mailto:nithyageorge47542@gmail.com?subject=Thesis walkthrough" class="nda-walkthrough">Request walkthrough &rarr;</a>
+    </div>
+    <!-- ROW 2: DOC-INTERACT full width -->
     <div class="doc-interact-card reveal" id="doccard">
-      <div class="project-num" style="color:rgba(78,205,196,.05);">02</div>
+      <div class="project-num" style="color:rgba(78,205,196,.05);">06</div>
       <div class="project-badges"><span class="badge badge-live">&#9679; Personal Project</span><span class="badge badge-teal">RAG &middot; Document Intelligence</span><span class="badge badge-vibe">Multi-Mode</span></div>
       <div class="project-title">DOC-INTERACT: Intelligent Document Analysis Platform</div>
       <div class="project-story">Designed and shipped a <strong>full document intelligence application</strong> &mdash; upload any PDF or Word file and interact in three modes: RAG-based chat, map-reduce summarization, and side-by-side multi-document comparison. Custom <strong>chunk-and-retrieve pipeline</strong> using ChromaDB vector storage and Sentence Transformers embeddings.</div>
@@ -465,15 +473,7 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
       <div class="project-stack"><span class="tag tag-t">Streamlit</span><span class="tag tag-g">LangChain</span><span class="tag tag-t">ChromaDB</span><span class="tag tag-r">Sentence Transformers</span><span class="tag tag-g">Llama API</span><span class="tag tag-w">PyMuPDF</span><span class="tag tag-w">Tesseract OCR</span><span class="tag tag-b">Python</span></div>
       <a href="mailto:nithyageorge47542@gmail.com?subject=DOC-INTERACT walkthrough" class="nda-walkthrough">Request code walkthrough &rarr;</a>
     </div>
-    <div class="project-card reveal">
-      <div class="project-num">03</div>
-      <div class="project-top"><div class="project-badges"><span class="badge badge-thesis">Master's Thesis &middot; 2026</span></div></div>
-      <div class="project-title">Layered LLM Architecture for Autonomous AI</div>
-      <div class="project-story">Brain-inspired cognitive system with five layers (perception, affect modelling, reasoning, self-reflection, ethics) running a heartbeat-driven loop. A self-referential <strong>"Self / Transcendence" layer</strong> enables internally grounded decision-making based on survival, coherence, identity alignment, and progression.<br><br>Stack: FastAPI, React, Redis, LM Studio (Llama 3.1 8B) + GPT-4o, <strong>OpenClaw</strong> for real-world task execution (web, email, calendar, filesystem).</div>
-      <div class="project-outcome">&rarr; Proto-autonomous behavior &middot; Fully local LLMs &middot; Architecture walkthrough available</div>
-      <div class="project-stack"><span class="tag tag-g">LangGraph</span><span class="tag tag-t">FastAPI</span><span class="tag tag-t">Redis</span><span class="tag tag-r">React</span><span class="tag tag-w">LM Studio</span><span class="tag tag-w">OpenClaw</span></div>
-      <a href="mailto:nithyageorge47542@gmail.com?subject=Thesis walkthrough" class="nda-walkthrough">Request walkthrough &rarr;</a>
-    </div>
+    <!-- ROW 3: LLM Eval + AI4SE -->
     <div class="project-card reveal">
       <div class="project-num">04</div>
       <div class="project-top"><div class="project-badges"><span class="badge badge-nda">NDA &middot; Fraunhofer</span></div></div>
@@ -492,6 +492,8 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
       <div class="project-stack"><span class="tag tag-g">RAG</span><span class="tag tag-t">Django</span><span class="tag tag-r">React</span><span class="tag tag-w">GPT-4</span><span class="tag tag-w">PostgreSQL</span><span class="tag tag-r">Figma</span></div>
       <a href="mailto:nithyageorge47542@gmail.com?subject=Systems Engineering walkthrough" class="nda-walkthrough">Request walkthrough &rarr;</a>
     </div>
+    <!-- empty cell to complete 3-col row -->
+    <div style="background:transparent;border:none;"></div>
   </div>
 </section>
 <div class="divider"></div>
@@ -529,8 +531,7 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
     <a href="https://www.linkedin.com/in/nithya-george-53b4a4257/" target="_blank" rel="noopener noreferrer" class="rec-card" aria-label="Read full recommendation on LinkedIn">
       <div class="rec-linkedin-badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <span>View on LinkedIn</span>
-        <span>&#8599;</span>
+        <span>View on LinkedIn</span><span>&#8599;</span>
       </div>
       <div class="rec-quote-mark">"</div>
       <div class="rec-reviewer">
@@ -549,20 +550,17 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
         <span class="rec-tag">Architectural Thinking</span>
         <span class="rec-tag">Real Execution Power</span>
       </div>
-      <div class="rec-closing">
-  <p>Nithya is an exceptionally strong engineer who combines deep technical skill with the ability to build practical, high-impact solutions. She has worked across complex AI systems, multi-agent architectures, mobile applications, and document processing platforms with a level of ownership and clarity that is rare to find.</p>
-
-  <p>What stands out most is her ability to take challenging problems and turn them into scalable, well-structured products. She has contributed to building advanced AI-driven systems, secure tenant-aware platforms, and user-facing applications while always keeping reliability, usability, and business value in mind. Her work shows both strong architectural thinking and real execution power.</p>
-
-  <p>Beyond her technical abilities, Nithya is thoughtful, dependable, and highly capable of working across different layers of a product, from backend systems to user experience. She brings a strong problem-solving mindset, adapts quickly to complex requirements, and consistently delivers with professionalism.</p>
-
-  <p>I would highly recommend Nithya to any team looking for someone who can bridge advanced engineering with real product impact.</p>
-</div>
+      <div class="rec-body">
+        <p>She has worked across complex AI systems, multi-agent architectures, mobile applications, and document processing platforms with a level of ownership and clarity that is rare to find.</p>
+        <p>What stands out most is her ability to take challenging problems and turn them into scalable, well-structured products &mdash; advanced AI-driven systems, secure tenant-aware platforms, and user-facing applications while always keeping reliability, usability, and business value in mind.</p>
+        <p>Beyond her technical abilities, Nithya is thoughtful, dependable, and highly capable of working across different layers of a product, from backend systems to user experience. She brings a strong problem-solving mindset and consistently delivers with professionalism.</p>
+      </div>
+      <div class="rec-closing">"I would highly recommend Nithya to any team looking for someone who can bridge advanced engineering with real product impact."</div>
     </a>
     <div class="rec-placeholder">
       <div class="rec-placeholder-icon">+</div>
       <div class="rec-placeholder-text">More recommendations<br>on LinkedIn</div>
-      <a href="https://www.linkedin.com/in/nithya-george-53b4a4257/details/recommendations/" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link">View Profile &#8599;</a>
+      <a href="https://www.linkedin.com/in/nithya-george-53b4a4257/" target="_blank" rel="noopener noreferrer" class="rec-linkedin-link">View Profile &#8599;</a>
     </div>
   </div>
 </section>
@@ -583,13 +581,7 @@ footer{padding:22px 56px;border-top:1px solid var(--border);display:flex;justify
   </div>
 </div>
 <footer>
-  <div class="footer-left">
-    <span>Nithya Susan George</span>
-    <div class="footer-sep"></div>
-    <span>AI Engineer &amp; Full Stack Developer</span>
-    <div class="footer-sep"></div>
-    <span>Paderborn, Germany</span>
-  </div>
+  <div class="footer-left"><span>Nithya Susan George</span><div class="footer-sep"></div><span>AI Engineer &amp; Full Stack Developer</span><div class="footer-sep"></div><span>Paderborn, Germany</span></div>
   <span>&copy; 2026</span>
 </footer>
 <script>
